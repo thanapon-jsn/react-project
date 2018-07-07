@@ -1,20 +1,31 @@
 import React, { Component } from 'react'
 import logo from './assets/images/logo.svg'
+import defaultImage from './assets/images/panda.jpg'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/styles/app.css'
-import HelloApp from './components/HelloApp'
+import './assets/styles/pikkanode.css'
+import './assets/styles/pikkanode_mp.css'
+import Navbar from './components/Navbar'
+import Picturecard from './components/Picturecard'
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <HelloApp />
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <div>
+          <Navbar />
+        </div>
+
+        <div>
+          <Picturecard image={defaultImage} />
+        </div>
+
+        <div className='App'>
+          <footer className='App-header'>
+            <img src={logo} className='App-logo' alt='logo' />
+            <h1 className='App-title'>Welcome to React</h1>
+          </footer>
+        </div>
       </div>
     )
   }
