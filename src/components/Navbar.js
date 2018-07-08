@@ -16,9 +16,9 @@ class Navbar extends React.Component {
             </li>
           </ul>
         </div>
-        <a class='btn btn-outline-dark mr-4' href='/signin'>Sign in</a>
+        <a className='btn btn-outline-dark mr-4' href='/signin'>Sign in</a>
 
-        <a class='btn btn-dark mr-10' href='/signup'>Sign up</a>
+        <a className='btn btn-dark mr-10' href='/signup'>Sign up</a>
       </nav>
     )
   }
