@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"30-seconds-of-code@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/30-seconds-of-code/-/30-seconds-of-code-0.0.3.tgz#08d539ad07b01696565f25d3ced78e49d94d1d76"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
