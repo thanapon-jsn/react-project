@@ -5,14 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/styles/app.css'
 import './assets/styles/pikkanode.css'
 import './assets/styles/pikkanode_mp.css'
-import RandomBox from './components/RandomBox'
 import Navbar from './components/Navbar'
 import Picturecard from './components/Picturecard'
 
 class App extends Component {
   render () {
-    const color = ['red', 'blue', 'green', 'purple', 'pink']
-
     const picturecard = [{
       id: 1,
       imgSrc: defaultImage,
@@ -69,10 +66,6 @@ class App extends Component {
           <Navbar />
         </div>
 
-        <div className='d-flex justify-content-center'>
-          <RandomBox colorBox={color[randomColorBox()]} fontSize={randomFontSize()} />
-        </div>
-
         <article className='container'>
           <div className='row pt-4'>
             {allPictureCard}
@@ -89,9 +82,5 @@ class App extends Component {
     )
   }
 }
-
-const randomColorBox = () => Math.floor(Math.random() * Math.floor(5))
-
-const randomFontSize = () => Math.floor(Math.random() * Math.floor(20)) + 20
 
 export default App
