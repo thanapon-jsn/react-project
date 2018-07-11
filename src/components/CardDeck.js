@@ -9,8 +9,7 @@ class CardDeck extends React.Component {
         backgroundColor: color,
         color: 'black',
         width: 200,
-        height: 230,
-        margin: 20}} />
+        height: 230}} key={this.props.cid} />
     )
   }
 }
