@@ -32,36 +32,33 @@ const Button = styled.button`
   transform: translateY(1px);`
 
 class Home extends React.Component {
+  state = {
+    cardId: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }
+
   randomDeck = () => {
-    let random = soc.shuffle(this.state.cardId)
-    this.setState({
-      cardId: random
-    })
+    this.setState((prevState) => ({
+      cardId: soc.shuffle(prevState.cardId)
+    }))
+  }
+
+  clickCardHandler = (color) => {
+    alert(`${color} color`)
   }
 
   render () {
-    this.state = {
-      cardId: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    }
-
-    const color = ['red', 'blue', 'green', 'purple', 'pink']
+    const color = ['red', 'blue', 'green', 'purple', 'pink','red', 'blue', 'green', 'purple', 'pink']
 
     const allCard = this.state.cardId.map(cid =>
       <div className='col-xs-6 col-md-2 m-3'>
-        <CardDeck cardColor={color[cid]} cid={cid} />
+        <CardDeck cardColor={color[cid]} cid={cid} eventClick={this.clickCardHandler.bind(this, color[cid])} />
       </div>
     )
 
     return (
       <div>
-
-        <div className='d-flex justify-content-center'>
-          <RandomBox colorBox={color[randomColorBox()]} fontSize={randomFontSize()} />
-        </div>
-
         <div className='d-flex justify-content-center row'>
           {soc.shuffle(allCard)}
-
           <Button onClick={this.randomDeck}>New Deck</Button>
         </div>
 
@@ -71,6 +68,7 @@ class Home extends React.Component {
             <h1 className='App-title'>Welcome to React</h1>
           </footer>
         </div>
+
       </div>
     )
   }
